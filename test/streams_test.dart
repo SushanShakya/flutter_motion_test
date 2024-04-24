@@ -19,10 +19,8 @@ void main() {
     var l = List.generate(101, (i) => i);
     when(() => timer.delay()).thenAnswer((a) => Future.delayed(Duration.zero));
 
-    // Create an instance of the chatStream
     var data = await streams.streamGenerator(0, 100).toList();
 
-    // Define the expected output
     final bool equal = const ListEquality().equals(l, data);
     expect(equal, true);
   });
@@ -30,10 +28,8 @@ void main() {
     var l = List.generate(101, (i) => i);
     when(() => timer.delay()).thenAnswer((a) => Future.delayed(Duration.zero));
 
-    // Create an instance of the chatStream
     var data = await streams.data1.toList();
 
-    // Define the expected output
     final bool equal = const ListEquality().equals(l, data);
     expect(equal, true);
   });
@@ -41,10 +37,8 @@ void main() {
     var l = List.generate(101, (i) => i + 100);
     when(() => timer.delay()).thenAnswer((a) => Future.delayed(Duration.zero));
 
-    // Create an instance of the chatStream
     var data = await streams.data2.toList();
 
-    // Define the expected output
     final bool equal = const ListEquality().equals(l, data);
     expect(equal, true);
   });
@@ -52,10 +46,8 @@ void main() {
     var l = List.generate(101, (i) => i + 200);
     when(() => timer.delay()).thenAnswer((a) => Future.delayed(Duration.zero));
 
-    // Create an instance of the chatStream
     var data = await streams.data3.toList();
 
-    // Define the expected output
     final bool equal = const ListEquality().equals(l, data);
     expect(equal, true);
   });
